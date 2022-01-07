@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Result</title>
+</head>
+<body>
+
+    <h1>Your list of <span th:text="${numVal}"></span> random numbers</h1>
+    <ul th:each="numVal: ${randNumsResult}">
+        <li th:text="${numVal}"></li>
+        <img th:src="@{${'/image/' + numVal}}" width="200"/>
+    </ul>
+
+<!--    <a href="/generate">Generate again</a>-->
+    <form action="/generate">
+        <input type="submit" value="Generate again" />
+    </form>
+</body>
+</html>

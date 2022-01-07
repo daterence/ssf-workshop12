@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+    <div th:text="${errorMessage}">
+    </div>
+<!--    <a href="/generate">Generate again</a>-->
+<!--    Generate - Button-->
+    <form action="/generate">
+        <input type="submit" value="Generate again" />
+    </form>
+    <!--  <h1>Error!</h1>-->
+</body>
+</html>

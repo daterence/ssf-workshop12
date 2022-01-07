@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h1>How many numbers do you wish to generate?</h1>
+    <form
+        action="#"
+        th:action="@{/generate}"
+        th:object="${generate}"
+        method="post"
+    >
+        <p>
+            <input type="text" placeholder="Enter 0 - 10" th:field="*{numberVal}"/>
+            <input type="submit" value="Generate"/>
+        </p>
+    </form>
+</body>
+</html>
